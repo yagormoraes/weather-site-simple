@@ -3,7 +3,6 @@
     padding: 0px;
 }
 
-
 header {
     background-color: aqua;
     height: 10vh;
@@ -17,39 +16,68 @@ main {
     align-items: center;
     justify-content: center;
 }
-.date{
-    display: flex;
-    flex-direction: row;
-}
 
-.testando {
-    background-color: white;
-    width: 300px;
-    height: 400px;
+#testando {
+    background-color: rgb(139, 217, 234);
     display: flex;
     flex-direction: column;
 }
+.date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.date-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black 2px solid;
+    padding: 5px;
+    margin: 15px 0px;
+}
+
+#input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#city-input {
+    width: 150px;
+    margin-bottom: 5px;
+}
+
 
 #country-flag{
     width: 30px;
     height: 30px;
 }
 
-.country-data {
-    display: flex;
+#country-data {
+    display: none;
     align-items: center;
 }
 
 #weather-flag{
     width: 30px;
     height: 30px;
-    background-color:#a7afb7 ;
-    border-radius: 5px;
+    background-color:#a4a8ac94 ;
+    border-radius: 10px;
 }
 
 #weather-data {
-    display: flex;
+    display: none;
     flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+#weather-condition{
+    text-transform: capitalize;
 }
 
 footer {

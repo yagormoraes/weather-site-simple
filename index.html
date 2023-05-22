@@ -8,52 +8,52 @@
         <title>Testando site</title>
     </head>
     <body>
-        <header> teste</header>
+        <header></header>
         <main>
-            <h1>teste</h1>
-            <div class="testando">
+            <div id="testando">
                 <div class="date">
-                    <div class="hours">
-                        <span data-time="hours"></span>
-                        <span>:</span>
+                    <div class="date-block">
+                        <span id="hours" data-time="hours"></span>
+                        <span>Horas</span>
                     </div>
-                    <div class="minutes">
-                        <span data-time="minutes"></span>
-                        <span>:</span>
+                    <div class="date-block">
+                        <span id="minutes" data-time="minutes"></span>
+                        <span>Minutos</span>
                     </div>
-                    <div class="seconds">
-                        <span data-time="seconds"></span>
+                    <div class="date-block">
+                        <span id="seconds" data-time="seconds"></span>
+                        <span>Segundos</span>
                     </div>
                 </div>
 
-                <div class="input">
-                    <input type="text" placeholder="Digite o nome da cidade" id="city-input">
-                    <button id="search">Procurar</button>
+                <div id="input">
+                    <div id="input-search">
+                        <input type="text" placeholder="Digite o nome da cidade" id="city-input">
+                        <button id="search">Procurar</button>   
+                    </div>
+                    <button id="geo-search">Geolocalização</button> 
                 </div>
 
-                <div class="country-data">
+                <div id="country-data">
                     <span id="country-name"></span>
-                    <img id="country-flag" src>
-                    
+                    <img id="country-flag" src="">
                 </div>
 
                 <div id="weather-data">
-                    <img id="weather-flag">
-                    
                     <span id="temp"></span>
                     <span id="temp-min"></span>
                     <span id="temp-max"></span>
 
+                    <img id="weather-flag">
                     <span id="weather-condition"></span>
                     <span id="wind-condition"></span>
                     <span id="humidity-condition"></span>
-
                 </div>
 
             </div>
 
         </main>
-        <footer> teste</footer>
+        <footer></footer>
 
     </body>
     <script src="index.js"></script>
