@@ -21,12 +21,19 @@ main {
     background-color: rgb(139, 217, 234);
     display: flex;
     flex-direction: column;
+    border: 2px black solid;
+
 }
 .date{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin-top: 7px;
+}
+
+#blocks{
+    display: flex;
 }
 
 .date-block {
@@ -35,34 +42,103 @@ main {
     align-items: center;
     border: black 2px solid;
     padding: 5px;
-    margin: 15px 0px;
+    margin-bottom: 15px;
 }
 
 #input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px black solid;
+    padding: 5px;
+    margin: 5px;
 }
 
 #city-input {
     width: 150px;
-    margin-bottom: 5px;
 }
 
+#search{
+    width: 25px;
+    height: 25px;
+    border: 0.1px gray solid;
+    border-radius: 5px;
 
-#country-flag{
-    width: 30px;
+}
+
+#geo-search{
     height: 30px;
+    width: 110px;
+    margin-top: 5px;   
+    border: 0.1px gray solid;
+    border-radius: 5px; 
 }
 
-#country-data {
-    display: none;
+#search-icon{
+    width: 13px;
+    height: 13px;
+}
+
+#location {
+    width: 15px;
+}
+
+.icon{
+    width: 15px;
+    padding-right:5px ;
+}
+
+#temperatures{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    border: 2px green solid;
+    margin: 0px;
+    height: 50px;
+}
+
+#conditions{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border: 2px red solid;
+    height: 50px;
+}
+
+.temp-block{
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
+.temp-img{
+    width: 15px;
+    height: 15px;
+}
+
+.condition{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px black solid;
+    width: 100px;
+}
+
+#flag{
+    display: flex;
+}
+
+
+#country-data {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #weather-flag{
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     background-color:#a4a8ac94 ;
     border-radius: 10px;
 }

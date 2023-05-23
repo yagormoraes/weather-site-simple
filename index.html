@@ -11,43 +11,84 @@
         <header></header>
         <main>
             <div id="testando">
-                <div class="date">
-                    <div class="date-block">
-                        <span id="hours" data-time="hours"></span>
-                        <span>Horas</span>
-                    </div>
-                    <div class="date-block">
-                        <span id="minutes" data-time="minutes"></span>
-                        <span>Minutos</span>
-                    </div>
-                    <div class="date-block">
-                        <span id="seconds" data-time="seconds"></span>
-                        <span>Segundos</span>
-                    </div>
-                </div>
-
                 <div id="input">
                     <div id="input-search">
                         <input type="text" placeholder="Digite o nome da cidade" id="city-input">
-                        <button id="search">Procurar</button>   
+                        <button id="search">
+                            <img id="search-icon" src="./assets/magnifier.png" alt="">
+                        </button>   
                     </div>
+                    <span> ou </span>
                     <button id="geo-search">Geolocalização</button> 
                 </div>
 
                 <div id="country-data">
-                    <span id="country-name"></span>
-                    <img id="country-flag" src="">
+                    <img id="weather-flag">
+                    <span id="weather-condition"></span>
+                    <div>
+                        <img id="location" src="./assets/location.png">
+                        <span id="country-name"></span>
+                    </div>
+                    
+                    <div id="flag">
+                        <img id="country-flag">
+                    </div>
+
+                    <div class="date">
+                        <div id="hour-string">
+                            <span>Hora Local: (bugado)</span>
+                        </div>
+                    
+                        <div id="blocks">
+                            <div class="date-block">
+                                <span id="hours" data-time="hours"></span>
+                                <span>Horas</span>
+                            </div>
+                            <div class="date-block">
+                                <span id="minutes" data-time="minutes"></span>
+                                <span>Minutos</span>
+                            </div>
+                            <div class="date-block">
+                                <span id="seconds" data-time="seconds"></span>
+                                <span>Segundos</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
                 </div>
 
                 <div id="weather-data">
-                    <span id="temp"></span>
-                    <span id="temp-min"></span>
-                    <span id="temp-max"></span>
 
-                    <img id="weather-flag">
-                    <span id="weather-condition"></span>
-                    <span id="wind-condition"></span>
-                    <span id="humidity-condition"></span>
+                    <div id="temperatures">
+                        <div class="temp-block">
+                            <img class="temp-img" src="./assets/low-temperature.png" alt="">
+                            <span id="temp-min"></span>
+                        </div>
+                        <div class="temp-block">
+                            <img class="temp-img" src="./assets/thermometer.png" alt="">
+                            <span id="temp"></span>
+                        </div>
+                        <div class="temp-block">
+                            <img class="temp-img" src="./assets/high-temperature.png" alt="">
+                            <span id="temp-max"></span>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <div id="conditions">
+                        <div class="condition">
+                            <img class="icon" src="./assets/storm.png" >
+                            <span id="wind-condition"></span>
+                        </div>
+                        <div class="condition">
+                            <img class="icon" src="./assets/humidity.png" >
+                            <span id="humidity-condition"></span>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
 
             </div>

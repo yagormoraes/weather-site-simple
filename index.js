@@ -19,7 +19,15 @@ const weather = document.getElementById("weather-condition")
 const wind = document.getElementById("wind-condition")
 const humidity = document.getElementById("humidity-condition")
 
-function timeHander() {
+const getWeatherData = async (city) => {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}&lang=pt_br`
+    const res = await fetch(url)
+    const data = await res.json()
+    return data
+}
+
+async function timeHander() {
+    
     setInterval(() => {
         let localDate = new Date()
     
@@ -30,21 +38,16 @@ function timeHander() {
     },1000)
 }
 
-const getWeatherData = async (city) => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}&lang=pt_br`
-    const res = await fetch(url)
-    const data = await res.json()
-    return data
-}
-
 const showWeatherData = async (city) => {
     const data = await getWeatherData(city)
-    countryName.innerText = data.name
+    console.log(data)
+
+    countryName.innerText = `${data.name}, ${data.sys.country}`
     weatherFlag.setAttribute("src",`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
-    temp.innerText = `Temperatura: ${Math.round(data.main.temp)} °C`
-    tempMin.innerText = `Mínima: ${Math.round(data.main.temp_min)} °C`
-    tempMax.innerText = `Máxima: ${Math.round(data.main.temp_max)} °C`
-    weather.innerText = `Condição do tempo: ${data.weather[0].description}`
+    temp.innerText = `${Math.round(data.main.temp)} °C`
+    tempMin.innerText = `${Math.round(data.main.temp_min)} °C`
+    tempMax.innerText = `${Math.round(data.main.temp_max)} °C`
+    weather.innerText = `${data.weather[0].description}`
     wind.innerText = `${data.wind.speed} m/s`
     humidity.innerText = `${data.main.humidity}%`
 
